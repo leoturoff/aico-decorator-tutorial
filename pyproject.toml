@@ -10,7 +10,7 @@ requires-python = ">=3.14"
 dependencies = ["click>=8.3.1"]
 
 [project.scripts]
-decorators = "aico_decorator_tutorial:main"
+demo = "aico_decorator_tutorial:main"
 
 [build-system]
 requires = ["uv_build>=0.9.13,<0.10.0"]

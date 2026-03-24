@@ -34,14 +34,14 @@ def debug_with_exits(func: Callable) -> Callable:
     @wraps(func)
     def wrapper(*args, **kwargs):
         print()
-        logger.info(f"{func.__name__}: args={args}, kwargs={kwargs}")
+        logger.debug(f"{func.__name__}: args={args}, kwargs={kwargs}")
         try:
             result = func(*args, **kwargs)
-            logger.info(f"{func.__name__}: result={result}")
+            logger.debug(f"{func.__name__}: result={result}")
             print()
             return result
         except ControlledExit as e:
-            logger.info(f"{func.__name__}: {e}")
+            logger.warning(f"{func.__name__}: {e}")
             exit(0)
         except Exception as e:
             logger.error(f"{func.__name__}: Real Error! {e}")

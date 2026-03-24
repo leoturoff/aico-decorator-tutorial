@@ -43,12 +43,12 @@ def process(message: dict) -> dict:
     key, value = read_message(message)
     key, value = check_name(key, value)
     key, value = check_value(key, value)
-    key, value = wait_for(key, value, seconds=30)
+    key, value = wait_for(key, value, seconds=2)
     return write_message(key, value)
 
 
 # Main
-@click.command("error")
+@click.command("exceptions")
 def main() -> None:
     input_message = json.load(open("src/fixtures/error.json"))
     print(f"input_message={input_message}")

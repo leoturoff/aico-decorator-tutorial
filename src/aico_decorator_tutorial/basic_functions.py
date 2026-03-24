@@ -52,8 +52,9 @@ transform_message = my_decorator(transform_message)
 write_message = my_decorator(write_message)
 process = my_decorator(process)
 
+
 # Main
-@click.command("basic")
+@click.command("logging")
 def main() -> None:
     input_message = json.load(open("src/fixtures/basic.json"))
     print(f"input_message={input_message}")
