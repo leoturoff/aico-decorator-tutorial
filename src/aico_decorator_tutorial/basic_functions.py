@@ -19,7 +19,7 @@ decorated_func = my_decorator(my_func)
 import click
 import json
 from typing import Any
-from .utils.decorators import my_decorator
+# from .utils.decorators import my_decorator
 
 
 # Functions to be decorated
@@ -46,11 +46,11 @@ def process(message: dict) -> dict:
     return write_message(new_key, new_value)
 
 
-# Decorated functions
-read_message = my_decorator(read_message)
-transform_message = my_decorator(transform_message)
-write_message = my_decorator(write_message)
-process = my_decorator(process)
+# # Decorated functions
+# read_message = my_decorator(read_message)
+# transform_message = my_decorator(transform_message)
+# write_message = my_decorator(write_message)
+# process = my_decorator(process)
 
 
 # Main
